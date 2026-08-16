@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For You ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+   <audio src="barsaat.mp3" autoplay></audio>
+
+
+
+    <div id="lockScreen" class="lock-screen">
+
+        <div class="lock-card">
+
+            <div class="tiny-flower">✿</div>
+
+            <p class="eyebrow">A little something for</p>
+
+            <h1>Mannu</h1>
+
+            <p class="lock-subtitle">
+                Some things are easier to say<br>
+                when they're written down.
+            </p>
+
+            <div class="lock-input">
+
+                <input type="password" id="passwordInput" placeholder="secret word" autocomplete="off">
+
+                <button id="unlockButton">
+                    enter
+                </button>
+
+            </div>
+
+            <p id="errorMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+    <div id="website" class="website hidden">
+
+
+        <!-- =================================================
+         INTRO
+    ================================================== -->
+
+        <section class="intro-section">
+
+            <div class="intro-flower flower-one">✿</div>
+            <div class="intro-flower flower-two">♡</div>
+
+            <div class="intro-content">
+
+                <p class="eyebrow">for you</p>
+
+                <h2>
+                    I made this<br>
+                    <em>just for My Green.</em>
+                </h2>
+
+                <div class="little-line"></div>
+
+                <p class="intro-text">
+                    It's not a perfect apology But.<br>
+                    It's simply everything I wanted<br>
+                    you to know.
+                </p>
+
+                <button class="soft-button" onclick="scrollToSection('words')">
+                    read it slowly ↓
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+         WORDS
+    ================================================== -->
+
+        <section id="words" class="words-section">
+
+            <div class="content-small">
+
+                <p class="eyebrow">01 · the things I wanted to say</p>
+
+                <h2>
+                    If I could go back...
+                </h2>
+
+                <p class="main-quote" id="typingText"></p>
+
+                <p class="small-note">
+                <h4>I can't change what happened.<br>
+                    But I can learn from it.</h4>
+                </p>
+
+                <button class="text-button" onclick="scrollToSection('memories')">
+                    <h3> our little memories →</h3>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+         MEMORIES
+    ================================================== -->
+
+        <section id="memories" class="memories-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">02 · memories</p>
+
+                <h2>
+                    Ten little pieces<br>
+                    of <em>You!!.</em>
+                </h2>
+
+                <p>
+                    Maybe they're just photographs.<br>
+                    To me, they're much more than that.
+                </p>
+
+            </div>
+
+
+            <div class="polaroid-grid">
+
+
+                <!-- PHOTO 01 -->
+
+                <article class="polaroid tilt-left">
+
+                    <img src="images/photo1.jpg" alt="Memory 1">
+
+                    <div class="polaroid-caption">
+                        <span>01</span>
+                        <p>Your Eyes...🥹,Fell in love with themm</p>
+                    </div>
+
+                </article>
+
+
+                <!-- PHOTO 02 -->
+
+                <article class="polaroid tilt-right">
+
+                    <img src="images/photo2.jpg" alt="Memory 2">
+
+                    <div class="polaroid-caption">
+                        <span>02</span>
+                        <p>Your smile..💕, saari thakan mitaye...</p>
+                    </div>
+
+                </article>
+
+
+                <!-- PHOTO 03 -->
+
+                <article class="polaroid tilt-left-small">
+
+                    <img src="images/photo3.jpg" alt="Memory 3">
+
+                    <div class="polaroid-caption">
+                        <span>03</span>
+                        <p>You are perfect..
+
+                            .</p>
+                    </div>
+
+                </article>
+
+
+                <!-- PHOTO 04 -->
+
+                <article class="polaroid tilt-right-small">
+
+                    <img src="images/photo4.jpg" alt="Memory 4">
+
+                    <div class="polaroid-caption">
+                        <span>04</span>
+                        <p>The glowwww, chandramukhii.</p>
+                    </div>
+
+                </article>
+
+
+                <!-- PHOTO 05 -->
+
+                <article class="polaroid tilt-left">
+
+                    <img src="images/photo5.jpg" alt="Memory 5">
+
+                    <div class="polaroid-caption">
+                        <span>05</span>
+                        <p>Chutiya But cutiee.</p>
+                    </div>
+
+                </article>
+
+
+                <!-- PHOTO 06 -->
+
+                <article class="polaroid tilt-right">
+
+                    <img src="images/photo6.jpg" alt="Memory 6">
+
+                    <div class="polaroid-caption">
+                        <span>06</span>
+                        <p>Aesthetic But minee.</p>
+                    </div>
+
+                </article>
+
+
+                <!-- PHOTO 07 -->
+
+                <article class="polaroid tilt-left-small">
+
+                    <img src="images/photo7.jpg" alt="Memory 7">
+
+                    <div class="polaroid-caption">
+                        <span>07</span>
+                        <p>Photo teri batwe me laan ne phiree</p>
+                    </div>
+
+                </article>
+
+
+                <!-- PHOTO 08 -->
+
+                <article class="polaroid tilt-right-small">
+
+                    <img src="images/photo8.jpg" alt="Memory 8">
+
+                    <div class="polaroid-caption">
+                        <span>08</span>
+                        <p>sanskarri</p>
+                    </div>
+
+                </article>
+
+
+                <!-- PHOTO 09 -->
+
+                <article class="polaroid tilt-left">
+
+                    <img src="images/photo9.jpg" alt="Memory 9">
+
+                    <div class="polaroid-caption">
+                        <span>09</span>
+                        <p>Bhondu no.1.</p>
+                    </div>
+
+                </article>
+
+
+                <!-- PHOTO 10 -->
+
+                <article class="polaroid tilt-right">
+
+                    <img src="images/photo10.jpg" alt="Memory 10">
+
+                    <div class="polaroid-caption">
+                        <span>10</span>
+                        <p>Teri ada ada pe marta me....</p>
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <button class="text-button centered" onclick="scrollToSection('reasons')">
+                there's something I learned →
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+         FLIP CARDS
+    ================================================== -->
+
+        <section id="reasons" class="reasons-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">03 · things I Love About Youhh </p>
+
+                <h2>
+                    Tap a card To reveal .
+                </h2>
+
+                <p>
+                    There are some things<br>
+                    I Love about you my baccha...
+                </p>
+
+            </div>
+
+
+            <div class="flip-grid">
+
+
+                <div class="flip-card">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+
+                            <span>01</span>
+
+                            <h3>Listen</h3>
+
+                            <small>tap to read</small>
+
+                        </div>
+
+                        <div class="flip-back">
+
+                            <p>
+                                My little gurll, No one hears me except you my baccha,no one reacts like you, no one
+                                deserve these all except you meri TOTI.....
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="flip-card">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+
+                            <span>02</span>
+
+                            <h3>Communicate</h3>
+
+                            <small>tap to read</small>
+
+                        </div>
+
+                        <div class="flip-back">
+
+                            <p>
+                                Babe sach bolu toh no matter how you talk to me but when you talk to me it feels like
+                                i'm lost in youu..
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="flip-card">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+
+                            <span>03</span>
+
+                            <h3>Understand</h3>
+
+                            <small>tap to read</small>
+
+                        </div>
+
+                        <div class="flip-back">
+
+                            <p>
+                                No one understands me as you do, because you are the only one who is made for me.. toh
+                                meri hi rehna meri jaan </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="flip-card">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+
+                            <span>04</span>
+
+                            <h3>Appreciate</h3>
+
+                            <small>tap to read</small>
+
+                        </div>
+
+                        <div class="flip-back">
+
+                            <p>
+                                No matter what i do for you but you appreciate it however it is..Small efforts bhi tere
+                                liye such a big thing my cutiee..
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="flip-card">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+
+                            <span>05</span>
+
+                            <h3>Patience</h3>
+
+                            <small>tap to read</small>
+
+                        </div>
+
+                        <div class="flip-back">
+
+                            <p>
+                                Patience aaye haye, meri soni suhani.. kya hi bolu,love you my darlinggg...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="flip-card">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+
+                            <span>06</span>
+
+                            <h3>Us</h3>
+
+                            <small>tap to read</small>
+
+                        </div>
+
+                        <div class="flip-back">
+
+                            <p>
+
+                                I'm grateful that after everything, somehow we found our way back to each other And we
+                                will stay together Rest of our life
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button class="text-button centered" onclick="scrollToSection('letter')">
+                one last thing →
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+         LETTER
+    ================================================== -->
+
+        <section id="letter" class="letter-section">
+
+            <div class="letter-area">
+
+                <p class="eyebrow">
+                    04 · from my heart
+                </p>
+
+                <h2>
+                    I wrote you<br>
+                    a letter.
+                </h2>
+
+
+                <button id="letterButton" class="soft-button">
+                    open it gently ♡
+                </button>
+
+
+                <div id="letter" class="letter-paper">
+
+                    <div class="paper-top">
+                        <span>for you, always</span>
+                        <span>♡</span>
+                    </div>
+
+
+                    <div class="letter-body">
+
+                        <p>Dear Green!,</p>
+
+                        <p>
+                            I don't know if a website can say
+                            what I haven't been able to say properly,
+                            but I wanted to try.
+                        </p>
+
+                        <p>
+                            I'm sorry.
+                        </p>
+
+                        <p>
+                            I'm sorry for the moments where I hurt you,
+                            for the things I could have handled differently,
+                            and for the times when I didn't understand
+                            what you were trying to tell me.
+                        </p>
+
+                        <p>
+                            Being apart made me realize a lot.
+                            Some things become much clearer when
+                            you don't have them right in front of you.
+                        </p>
+
+                        <p>
+                            I don't want this letter to erase the past.
+                            I just want you to know that I remember it,
+                            I've thought about it, and I've learned from it.
+                        </p>
+
+                        <p>
+                            And somehow, after everything,
+                            we found our way back to each other.
+                        </p>
+
+                        <p>
+                            I'm genuinely grateful for that.
+                        </p>
+
+                        <p>
+                            I can't promise that we'll never
+                            misunderstand each other again.
+                            But I can promise that I'll try harder
+                            to listen, communicate, understand,
+                            and appreciate what we have.
+                        </p>
+
+                        <p>
+                            Thank you for being here again.
+                        </p>
+
+                        <p class="signature">
+                            I'm sorry.<br>
+                            And I'm really glad it's us again. ♡
+                        </p>
+
+                        <p class="signed">
+                            — Himesh
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+         FINAL
+    ================================================== -->
+
+        <section id="final" class="final-section">
+
+            <div class="final-content">
+
+                <div class="final-flower">✿</div>
+
+                <p class="eyebrow">05 · one last question</p>
+
+                <h2>
+                    Can you forgive me?
+                </h2>
+
+                <p>
+                    I won't ask you to forget anything.<br>
+                    I just hope you'll give us another chance.
+                </p>
+
+
+                <div id="buttonArea" class="button-area">
+
+                    <!-- THIS BUTTON STAYS -->
+
+                    <button id="forgiveButton" class="forgive-button">
+                        I forgive you ♡
+                    </button>
+
+
+                    <!-- THIS BUTTON RUNS AWAY -->
+
+                    <button id="thinkButton" class="think-button">
+                        Let me think...
+                    </button>
+
+                </div>
+
+
+                <div id="forgiveMessage" class="forgive-message"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+        <footer>
+
+            <p>
+                made with a little courage & a lot of care
+            </p>
+
+            <span>♡</span>
+
+        </footer>
+
+    </div>
+    <!-- Floating love decorations -->
+    <div class="love-decorations" aria-hidden="true">
+        <span>♡</span>
+        <span>✿</span>
+        <span>♡</span>
+        <span>❀</span>
+        <span>♡</span>
+        <span>✿</span>
+        <span>♡</span>
+        <span>❀</span>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1512 @@
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root {
+
+    --cream: #fcf9f5;
+    --cream-dark: #f6f0e9;
+
+    --pink: #dca5ad;
+    --pink-light: #f1dce0;
+
+    --rose: #a96f79;
+
+    --brown: #514346;
+    --brown-light: #806f72;
+
+    --white: #ffffff;
+
+    --shadow:
+        0 15px 40px rgba(83, 58, 62, 0.10);
+
+    --serif: "Cormorant Garamond", serif;
+    --sans: "DM Sans", sans-serif;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--brown);
+
+    font-family: var(--sans);
+
+    overflow-x: hidden;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =====================================================
+   LOCK SCREEN
+===================================================== */
+
+.lock-screen {
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background: var(--cream);
+}
+
+.lock-card {
+
+    width: 100%;
+    max-width: 470px;
+
+    text-align: center;
+
+    padding: 50px 35px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid rgba(169, 111, 121, 0.12);
+
+    border-radius: 30px;
+
+    box-shadow: var(--shadow);
+
+    animation: fadeUp 1s ease;
+}
+
+.tiny-flower {
+
+    font-size: 32px;
+
+    color: var(--pink);
+
+    margin-bottom: 25px;
+
+    animation: gentleFloat 3s ease-in-out infinite;
+}
+
+.eyebrow {
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    color: var(--rose);
+
+    margin-bottom: 18px;
+}
+
+.lock-card h1 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 12vw, 90px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    color: var(--brown);
+
+    margin-bottom: 25px;
+}
+
+.lock-subtitle {
+
+    font-family: var(--serif);
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    color: var(--brown-light);
+
+    margin-bottom: 35px;
+}
+
+.lock-input {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    max-width: 350px;
+
+    margin: auto;
+}
+
+.lock-input input {
+
+    min-width: 0;
+
+    width: 220px;
+
+    border: 1px solid #ead9dc;
+
+    background: #fff;
+
+    border-radius: 50px;
+
+    padding: 14px 18px;
+
+    text-align: center;
+
+    color: var(--brown);
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.lock-input input:focus {
+
+    border-color: var(--pink);
+
+    box-shadow:
+        0 0 0 4px rgba(220, 165, 173, 0.12);
+}
+
+.lock-input button {
+
+    border: none;
+
+    background: var(--brown);
+
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 50px;
+
+    transition: 0.3s;
+}
+
+.lock-input button:hover {
+
+    transform: translateY(-2px);
+
+    background: var(--rose);
+}
+
+#errorMessage {
+
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    color: var(--rose);
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro-section {
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background: var(--cream);
+}
+
+.intro-content {
+
+    max-width: 700px;
+
+    padding: 30px;
+
+    animation: fadeUp 1.2s ease;
+}
+
+.intro-content h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(65px, 10vw, 120px);
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+.intro-content h2 em {
+
+    color: var(--rose);
+
+    font-weight: 400;
+}
+
+.little-line {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: var(--pink);
+
+    margin: 35px auto;
+}
+
+.intro-text {
+
+    font-family: var(--serif);
+
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    color: var(--brown-light);
+
+    margin-bottom: 35px;
+}
+
+.intro-flower {
+
+    position: absolute;
+
+    color: var(--pink);
+
+    opacity: 0.45;
+
+    font-size: 35px;
+}
+
+.flower-one {
+
+    top: 15%;
+
+    left: 13%;
+
+    transform: rotate(-15deg);
+}
+
+.flower-two {
+
+    bottom: 15%;
+
+    right: 14%;
+
+    font-size: 45px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.soft-button {
+
+    border: 1px solid #dfc3c7;
+
+    background: white;
+
+    color: var(--rose);
+
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.soft-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow);
+
+    background: #fffafa;
+}
+
+.text-button {
+
+    border: none;
+
+    background: none;
+
+    color: var(--rose);
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.text-button:hover {
+
+    transform: translateX(5px);
+
+    color: var(--brown);
+}
+
+.centered {
+
+    display: block;
+
+    margin: 50px auto 0;
+}
+
+
+/* =====================================================
+   WORDS
+===================================================== */
+
+.words-section {
+
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #f8f2ed;
+
+    padding: 100px 25px;
+}
+
+.content-small {
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.content-small h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(50px, 8vw, 85px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin-bottom: 50px;
+}
+
+.main-quote {
+
+    min-height: 180px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+    color: var(--rose);
+}
+
+.small-note {
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: var(--brown-light);
+
+    margin: 35px 0;
+}
+
+
+/* =====================================================
+   MEMORIES
+===================================================== */
+
+.memories-section {
+
+    padding: 130px 25px;
+
+    background: var(--cream);
+}
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto 80px;
+}
+
+.section-heading h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 8vw, 90px);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+}
+
+.section-heading h2 em {
+
+    color: var(--rose);
+
+    font-weight: 400;
+}
+
+.section-heading>p:last-child {
+
+    font-family: var(--serif);
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    color: var(--brown-light);
+}
+
+.polaroid-grid {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 50px 25px;
+
+    align-items: center;
+}
+
+.polaroid {
+
+    background: white;
+
+    padding: 10px 10px 28px;
+
+    box-shadow:
+        0 12px 30px rgba(73, 48, 53, 0.09);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    opacity: 0;
+
+    animation: photoIn 0.8s forwards;
+}
+
+.polaroid:hover {
+
+    transform:
+        rotate(0deg) translateY(-10px) scale(1.04);
+
+    box-shadow:
+        0 25px 45px rgba(73, 48, 53, 0.16);
+
+    z-index: 5;
+}
+
+.polaroid img {
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 0.88;
+
+    object-fit: cover;
+}
+
+.polaroid-caption {
+
+    padding: 12px 5px 0;
+
+    text-align: center;
+}
+
+.polaroid-caption span {
+
+    display: block;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: var(--pink);
+
+    margin-bottom: 5px;
+}
+
+.polaroid-caption p {
+
+    font-family: var(--serif);
+
+    font-size: 17px;
+
+    line-height: 1.2;
+
+    color: var(--brown);
+}
+
+.tilt-left {
+    transform: rotate(-4deg);
+}
+
+.tilt-right {
+    transform: rotate(4deg);
+}
+
+.tilt-left-small {
+    transform: rotate(-2deg);
+}
+
+.tilt-right-small {
+    transform: rotate(2deg);
+}
+
+
+/* =====================================================
+   FLIP CARDS
+===================================================== */
+
+.reasons-section {
+
+    padding: 130px 25px;
+
+    background: #f8f2ed;
+}
+
+.flip-grid {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.flip-card {
+
+    height: 260px;
+
+    perspective: 1000px;
+
+    cursor: pointer;
+}
+
+.flip-inner {
+
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.65s cubic-bezier(.2, .7, .2, 1);
+}
+
+.flip-card.flipped .flip-inner {
+
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+
+    position: absolute;
+
+    inset: 0;
+
+    backface-visibility: hidden;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.flip-front {
+
+    background: white;
+
+    border: 1px solid #eee1e0;
+
+    box-shadow:
+        0 10px 30px rgba(73, 48, 53, 0.06);
+}
+
+.flip-front span {
+
+    color: var(--pink);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.flip-front h3 {
+
+    font-family: var(--serif);
+
+    font-size: 35px;
+
+    font-weight: 500;
+
+    color: var(--brown);
+}
+
+.flip-front small {
+
+    margin-top: 20px;
+
+    font-size: 10px;
+
+    color: #aaa;
+}
+
+.flip-back {
+
+    background: var(--pink-light);
+
+    transform: rotateY(180deg);
+
+    border: 1px solid #e7cbd0;
+}
+
+.flip-back p {
+
+    font-family: var(--serif);
+
+    font-size: 23px;
+
+    line-height: 1.45;
+
+    color: var(--brown);
+}
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+.letter-section {
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 130px 25px;
+
+    background: var(--cream);
+}
+
+.letter-area {
+
+    width: 100%;
+
+    max-width: 750px;
+
+    text-align: center;
+}
+
+.letter-area h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 8vw, 90px);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    margin-bottom: 40px;
+}
+
+.letter-paper {
+
+    display: none;
+
+    margin-top: 50px;
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.96),
+            rgba(255, 250, 247, 0.96));
+
+    border: 1px solid #eadbd6;
+
+    box-shadow:
+        0 20px 60px rgba(73, 48, 53, 0.10);
+
+    padding: 45px;
+
+    text-align: left;
+
+    animation: letterOpen 0.8s ease;
+}
+
+.letter-paper.show {
+
+    display: block;
+}
+
+.paper-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--pink);
+
+    font-family: var(--serif);
+
+    font-style: italic;
+
+    font-size: 15px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #eee2de;
+
+    margin-bottom: 30px;
+}
+
+.letter-body {
+
+    font-family: var(--serif);
+
+    font-size: 21px;
+
+    line-height: 1.75;
+
+    color: var(--brown);
+}
+
+.letter-body p {
+
+    margin-bottom: 20px;
+}
+
+.signature {
+
+    margin-top: 35px;
+
+    font-style: italic;
+
+    font-size: 26px;
+}
+
+.signed {
+
+    text-align: right;
+
+    color: var(--brown-light);
+}
+
+
+/* =====================================================
+   FINAL SECTION
+===================================================== */
+
+.final-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 25px;
+
+    background: #f8f2ed;
+}
+
+.final-content {
+
+    max-width: 700px;
+
+    width: 100%;
+}
+
+.final-flower {
+
+    font-size: 30px;
+
+    color: var(--pink);
+
+    margin-bottom: 25px;
+}
+
+.final-content h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(60px, 9vw, 100px);
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+}
+
+.final-content>p:not(.eyebrow) {
+
+    font-family: var(--serif);
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    color: var(--brown-light);
+}
+
+
+/* =====================================================
+   RUNAWAY BUTTON AREA
+===================================================== */
+
+.button-area {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 560px;
+
+    height: 190px;
+
+    margin: 45px auto 0;
+}
+
+
+/* FIXED FORGIVE BUTTON */
+
+.forgive-button {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 45px;
+
+    transform: translateX(-115%);
+
+    border: none;
+
+    background: var(--brown);
+
+    color: white;
+
+    padding: 16px 27px;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 10px 25px rgba(81, 67, 70, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.forgive-button:hover {
+
+    background: var(--rose);
+
+    transform:
+        translateX(-115%) translateY(-3px);
+}
+
+
+/* RUNAWAY BUTTON */
+
+.think-button {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 45px;
+
+    transform: translateX(15%);
+
+    border: 1px solid #d9c2c5;
+
+    background: white;
+
+    color: var(--brown-light);
+
+    padding: 16px 27px;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+
+    transition:
+        left 0.35s cubic-bezier(.2, .8, .2, 1),
+        top 0.35s cubic-bezier(.2, .8, .2, 1),
+        transform 0.25s ease;
+
+    z-index: 10;
+}
+
+.think-button:hover {
+
+    color: var(--rose);
+
+    border-color: var(--pink);
+}
+
+.forgive-message {
+
+    min-height: 80px;
+
+    margin-top: 10px;
+
+    font-family: var(--serif);
+
+    font-size: 27px;
+
+    line-height: 1.4;
+
+    color: var(--rose);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: var(--cream);
+
+    color: #a39396;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+footer span {
+
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 17px;
+
+    color: var(--pink);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(5deg);
+    }
+}
+
+@keyframes photoIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(25px) rotate(0);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes letterOpen {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(25px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0) scale(1);
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .polaroid-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        max-width: 700px;
+    }
+
+    .flip-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        max-width: 650px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .lock-card {
+
+        padding: 40px 20px;
+    }
+
+    .lock-input {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .lock-input input {
+
+        width: 100%;
+    }
+
+    .lock-input button {
+
+        width: 130px;
+    }
+
+    .intro-flower {
+
+        opacity: 0.25;
+    }
+
+    .polaroid-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 25px 12px;
+    }
+
+    .polaroid {
+
+        padding: 7px 7px 22px;
+    }
+
+    .polaroid-caption p {
+
+        font-size: 14px;
+    }
+
+    .flip-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 360px;
+    }
+
+    .flip-card {
+
+        height: 240px;
+    }
+
+    .letter-paper {
+
+        padding: 28px 22px;
+    }
+
+    .letter-body {
+
+        font-size: 19px;
+    }
+
+    .button-area {
+
+        height: 250px;
+
+        max-width: 340px;
+    }
+
+    .forgive-button {
+
+        left: 50%;
+
+        transform:
+            translateX(-105%);
+    }
+
+    .think-button {
+
+        left: 50%;
+
+        transform:
+            translateX(5%);
+    }
+
+    /* =====================================================
+   SOFT LOVE / HEART / FLOWER ANIMATIONS
+===================================================== */
+
+    .love-decorations {
+        position: fixed;
+
+        inset: 0;
+
+        pointer-events: none;
+
+        overflow: hidden;
+
+        z-index: 20;
+    }
+
+    .love-decorations span {
+        position: absolute;
+
+        bottom: -40px;
+
+        color: var(--pink);
+
+        opacity: 0;
+
+        font-size: 18px;
+
+        animation:
+            floatLove 12s linear infinite;
+    }
+
+
+    /* Different positions */
+
+    .love-decorations span:nth-child(1) {
+        left: 8%;
+        animation-delay: 0s;
+        font-size: 18px;
+    }
+
+    .love-decorations span:nth-child(2) {
+        left: 20%;
+        animation-delay: 3s;
+        font-size: 13px;
+    }
+
+    .love-decorations span:nth-child(3) {
+        left: 34%;
+        animation-delay: 6s;
+        font-size: 22px;
+    }
+
+    .love-decorations span:nth-child(4) {
+        left: 48%;
+        animation-delay: 1s;
+        font-size: 15px;
+    }
+
+    .love-decorations span:nth-child(5) {
+        left: 62%;
+        animation-delay: 5s;
+        font-size: 19px;
+    }
+
+    .love-decorations span:nth-child(6) {
+        left: 75%;
+        animation-delay: 8s;
+        font-size: 14px;
+    }
+
+    .love-decorations span:nth-child(7) {
+        left: 87%;
+        animation-delay: 4s;
+        font-size: 21px;
+    }
+
+    .love-decorations span:nth-child(8) {
+        left: 94%;
+        animation-delay: 10s;
+        font-size: 15px;
+    }
+
+
+    /* Floating animation */
+
+    @keyframes floatLove {
+
+        0% {
+
+            transform:
+                translateY(0) translateX(0) rotate(0deg) scale(0.7);
+
+            opacity: 0;
+
+        }
+
+        10% {
+
+            opacity: 0.45;
+
+        }
+
+        35% {
+
+            transform:
+                translateY(-30vh) translateX(15px) rotate(15deg) scale(1);
+
+        }
+
+        65% {
+
+            transform:
+                translateY(-65vh) translateX(-18px) rotate(-15deg) scale(0.9);
+
+        }
+
+        90% {
+
+            opacity: 0.25;
+
+        }
+
+        100% {
+
+            transform:
+                translateY(-110vh) translateX(20px) rotate(25deg) scale(0.7);
+
+            opacity: 0;
+
+        }
+
+    }
+
+
+    /* =====================================================
+   HEARTBEAT EFFECT
+===================================================== */
+
+    .final-flower {
+
+        animation:
+            tinyHeartbeat 2.5s ease-in-out infinite;
+    }
+
+    @keyframes tinyHeartbeat {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.15);
+        }
+
+    }
+
+
+    /* =====================================================
+   LITTLE FLOWER FLOAT
+===================================================== */
+
+    .intro-flower {
+
+        animation:
+            flowerFloat 5s ease-in-out infinite;
+    }
+
+    @keyframes flowerFloat {
+
+        0%,
+        100% {
+
+            transform:
+                translateY(0) rotate(-5deg);
+
+        }
+
+        50% {
+
+            transform:
+                translateY(-12px) rotate(8deg);
+
+        }
+
+    }
+
+
+    /* =====================================================
+   POLAROID LOVE HOVER
+===================================================== */
+
+    .polaroid:hover::after {
+
+        content: "♡";
+
+        position: absolute;
+
+        top: -15px;
+
+        right: -10px;
+
+        color: var(--pink);
+
+        font-size: 24px;
+
+        animation:
+            tinyHeartbeat 1.5s ease-in-out infinite;
+    }
+
+
+    /* =====================================================
+   LETTER HEART
+===================================================== */
+
+    .paper-top span:last-child {
+
+        animation:
+            tinyHeartbeat 2s ease-in-out infinite;
+    }
+
+
+    /* =====================================================
+   SOFT BUTTON LOVE
+===================================================== */
+
+    .soft-button:hover::after {
+
+        content: " ♡";
+
+        animation:
+            tinyHeartbeat 1s ease-in-out infinite;
+    }
+
+
+    /* =====================================================
+   MOBILE — EVEN MORE SUBTLE
+===================================================== */
+
+    @media (max-width: 600px) {
+
+        .love-decorations span {
+
+            font-size: 13px;
+
+            opacity: 0.25;
+
+        }
+
+    }
+}
